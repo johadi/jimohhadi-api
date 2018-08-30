@@ -16,6 +16,9 @@
   },
   "author": "jimoh hadi",
   "license": "ISC",
+  "engines": {
+    "node": "9.11.1"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
