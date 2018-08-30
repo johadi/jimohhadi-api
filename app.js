@@ -37,5 +37,5 @@ app.listen(port, (err) => {
   if (err) {
     return console.error(err);
   }
-  console.info('app running on port', port);
+  console.info('app is running on port', port);
 });
