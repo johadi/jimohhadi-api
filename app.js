@@ -13,6 +13,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('dist'));
 // app.use(express.static('public'));
 api(app);
 
@@ -24,6 +25,12 @@ mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true}, (err) => {
   else {
     console.info("database connected");
   }
+});
+// uncomment for favicon
+// app.use(favicon(path.join(__dirname, 'favicon.ico')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, './dist/index.html'));
 });
 
 app.listen(port, (err) => {
