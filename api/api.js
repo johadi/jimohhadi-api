@@ -28,7 +28,7 @@ router.post('/message', (req, res) => {
   const emailFrom = 'no-reply <jimoh@google.com>';
   // groupMemberEmails is an array of emails
   const emailTo = 'jimoh.hadi@gmail.com';
-  const emailSubject = 'Message from You Website';
+  const emailSubject = 'Message from Your Website';
   const emailTemplate = 'message';
   const emailContext = {
     name,
